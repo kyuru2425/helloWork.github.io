@@ -6,6 +6,8 @@ import Findjob from './findjob'
 import Aboutus from './aboutus'
 import Login from './login'
 import Contactus from './contactus'
+import Footer from '../components/Footer'
+
 const Index = () => {
   return (
     <Router>
@@ -18,6 +20,7 @@ const Index = () => {
             <Route exact path='/login' element={<Login/>}/>
 
         </Routes>
+        <Footer/>
     </Router>
   )
 }
