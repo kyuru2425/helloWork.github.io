@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../images/helloWorkLogo.png'
+import logo from '../images/logo.png'
 
 
 const Navlist = styled.a`
@@ -42,7 +42,7 @@ const Header = () => {
                     aria-label="menu"
                     sx={{ mr: 2 }}
                 >
-                    {/* <img src={logo}></img> */}
+                    <img src={logo}></img>
                 </IconButton>
                 
                     
