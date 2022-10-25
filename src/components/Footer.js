@@ -9,17 +9,20 @@ const divstyle ={
     margin : "0"
 }
 const boxleft ={
-    marginLeft: "-5em"
+    //marginLeft: "-5em"
 }
 const boxright ={
-    marginRight: "-5em",
+    //marginRight: "-5em",
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
     textAlign: "left"
 }
+
 const footercss ={
-    
+
+        display:  "flex",
+        flexDirection: "row",
         position: "fixed",
         backgroundColor: "gray",
         bottom: "0",

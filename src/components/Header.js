@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import logo from '../images/logo.png'
+import { height } from '@mui/system';
 
 
 const Navlist = styled.a`
@@ -34,16 +35,17 @@ const Header = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
                 <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                 <IconButton
-                    size="large"
+                    size="medium"
                     edge="start"
                     color="inherit"
                     aria-label="menu"
                     sx={{ mr: 2 }}
                 >
-                    <img src={logo}></img>
+                    <img src={logo} style={{width:"225px", height:"55px"}}></img>
                 </IconButton>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                
                 
                     
                 </Typography>
