@@ -4,6 +4,7 @@ import './Aboutus.css'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Button from '@mui/material/Button';
+import PortfolioCard from '../components/PortfolioCard'
 
 
 const StyledLink = styled(Link)`
@@ -21,7 +22,7 @@ const StyledLink = styled(Link)`
 
 const Aboutus = () => {
   return (
-    <div>
+    <div className='tocol'>
       <div className="torow">
         <div>
           <img src={aboutimg} style={{maxWidth:"500px"}}></img>  
@@ -29,10 +30,13 @@ const Aboutus = () => {
         <div>
           <h2>About Us</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! Eveniet minus deleniti in nesciunt voluptatem ratione sit! Optio ut porro voluptates magnam commodi dicta tenetur cupiditate, necessitatibus nobis est inventore nisi nemo perferendis quidem adipisci iste suscipit error.</p>
-          <StyledLink to="/login"><Button>See Developers</Button></StyledLink>
+          <StyledLink><Button href='#developers'>See Developers</Button></StyledLink>
+          <button><a href="#developers">See Developers</a></button>
         </div>
       </div>
-      
+      <div id='developers' className='developers'>
+          <PortfolioCard/>
+      </div>
     </div>
   )
 }

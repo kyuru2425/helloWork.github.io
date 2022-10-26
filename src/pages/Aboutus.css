@@ -5,3 +5,12 @@
     padding: 50px;
     height: 90vh;
 }
+
+.tocol{
+    display: flex;
+    flex-direction: column;
+}
+
+.developers{
+    padding: 15px;
+}
