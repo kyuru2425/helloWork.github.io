@@ -1,0 +1,43 @@
+.findJobContainer {
+  background-color: white;
+  min-height: 90vh;
+  overflow-y: scroll;
+}
+.inputContainer {
+  background-color: #1976d2;
+  padding: 10px;
+}
+
+input {
+  height: 50px;
+  width: 40%;
+  border-radius: 25px;
+}
+
+.jobCardsContainer {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 20px 10vw;
+  color: white;
+}
+
+.jobCards {
+  background-color: #1976d2;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0;
+}
+
+.jobCards > button {
+  background-color: #fbb631;
+  padding: 5px 10px;
+  border: none;
+  margin: 10px;
+  border-radius: 8px;
+}
+.jobCards > button > a {
+  color: black;
+  text-decoration: none;
+}
