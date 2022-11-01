@@ -1,4 +1,20 @@
-@media screen and (min-width:478px)and(max-width:700px){
-    
-    
+.icons > a:hover {
+  color: #fbb631;
+  scale: 1.5;
+}
+.contactFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  align-items: flex-start;
+}
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+.icons > a {
+  color: white;
 }

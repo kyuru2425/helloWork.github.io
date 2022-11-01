@@ -1,0 +1,30 @@
+.jobDescription {
+  margin: 10vh 10vw;
+  border: 1px solid gainsboro;
+  /* border-right: 1px solid gainsboro; */
+  padding: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.aboutRole,
+.location,
+.responsibilities,
+.qualifications,
+.perks {
+  text-align: left;
+}
+.applyButton {
+  background-color: #fbb631;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px 0;
+}
+.jobDescription > h1,
+h3,
+span,
+b {
+  color: #1976d2;
+}
+.applyButton > h2 {
+  color: white;
+}

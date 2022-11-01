@@ -20,27 +20,41 @@ position relative;
 
 const Home = () => {
   return (
-    <div className="mainContainer">
+    <div className="mainHomeContainer">
       <div className="cardContainer">
         <div className="textContainer">
           <h1>
             Let's Find Your <br />
-            Dream Job Here
+            Dream <span>Job</span> Here
           </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             cumque, numquam saepe voluptates iusto ipsum reprehenderit, nulla
             eos aperiam laudantium explicabo tenetur quis libero iste nihil eius
-            eligendi cum sapiente.{" "}
+            eligendi cum sapiente.
           </p>
           <StyledLink to="/findjob" className="findJobButton">
             <Button>
-              <i class="bi bi-search"></i>Find a Job
+              <i class="bi bi-search"></i> Find a Job
             </Button>
           </StyledLink>
         </div>
         <div className="imageContainer">
           <img src={programmer1}></img>
+        </div>
+      </div>
+      <div className="countDiv">
+        <div>
+          <h1>150K</h1>
+          <p>Job Vacancies</p>
+        </div>
+        <div>
+          <h1>205K+</h1>
+          <p>Job Seekers Active</p>
+        </div>
+        <div>
+          <h1>125K+</h1>
+          <p>Incorporated Companies</p>
         </div>
       </div>
     </div>

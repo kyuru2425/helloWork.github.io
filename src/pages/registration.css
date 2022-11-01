@@ -1,0 +1,22 @@
+.registrationContainer {
+  width: 50vw;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 100px;
+  /* border-radius: 25px; */
+  box-shadow: 0 0 10px black;
+  color: #1976d2;
+}
+.mainRegContainer {
+  background-image: linear-gradient(to bottom, #1976d2, #36495d);
+  display: flex;
+  justify-content: center;
+}
+.regButton {
+  background-color: #fbb631;
+}
+.regButton:hover {
+  background-color: white;
+}
+#registerForm > input {
+  border: 1px solid #1976d2;
+}

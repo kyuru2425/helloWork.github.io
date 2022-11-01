@@ -1,85 +1,73 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-   
-    
-    
-    }
-    
-    
-    .box {
-        width: 400px;
-        height: 490px;
-        padding: 40px;
-        /* position: absolute;
+.mainContainer {
+  background-image: linear-gradient(to bottom, #1976d2, #36495d);
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logInContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-image: linear-gradient(to bottom, #1976d2, #36495d); */
+  width: 90vw;
+  padding: 60px 50px;
+  border-radius: 25px;
+}
+.box {
+  width: 400px;
+  height: 600px;
+  padding: 40px;
+  /* position: absolute;
         top: 50%;
         left: 50%;
         transform: translate( 10%, -60%); */
-        background-color: #aecefe;
-        border-radius: 0.5rem ;
-        
-        
-    
-    
-    }
-    .box input[type = "email"], .box input[type="password"] {
-        border: 2px solid #2ecc71;
-        background: white;
-        display:block;
-        margin: 0px auto;
-        text-align: center;
-        padding: 14px 10px;
-        width: 250px;
-        color: rgb(14, 2, 2);
-        border-radius: 20px;
-        transition: 0.25s;
-        cursor: pointer;
-      
-
-    }
-    
-    
-    h1 {
-        text-align: center;
-        padding-bottom: 20px;
-    
-    }
-    
-    .login {
-        justify-content: center;
-        align-items: center;
-        display:flex;
-        height: 30px;
-        width: 80px;
-        background-color: #FBB631;
-        transform: translate(155%, 100%);
-    }
-    
-    .box input[type = "submit"]:hover {
-        background: #2ecc71;
-        cursor: pointer;
-    
-    }
-
-
-    a {
-            color: white
-    }
-
-    a :hover {
-        background-color: green
+  background-color: white;
+  color: #1976d2;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px black;
+}
+.box input[type="email"],
+.box input[type="password"] {
+  border: 2px solid #1976d2;
+  background: white;
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+  padding: 14px 10px;
+  width: 250px;
+  color: rgb(14, 2, 2);
+  border-radius: 20px;
+  transition: 0.25s;
+  cursor: pointer;
 }
 
+.box > h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
 
-/* .login {
-    height: 490px;
-    width: 550px; */
-    /* transform: translate(-42.5%, 30%); */
-    /* border-radius: 1rem;
-} */
+.login {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 30px;
+  width: 80px;
+  background-color: #fbb631;
+  transform: translate(155%, 100%);
+}
 
-.login_container{
-    display: flex;
-    
+.logInButton:hover {
+  /* background: #2ecc71; */
+
+  background-color: white;
+}
+.logInButton {
+  background-color: #fbb631;
+  padding: 10px;
+}
+
+.logInWrapper {
+  display: flex;
+  align-items: center;
 }

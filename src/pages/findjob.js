@@ -1,6 +1,22 @@
 import React, { useState } from "react";
 import Joblist from "../components/JobList";
 import "./findJob.css";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Button from "@mui/material/Button";
+
+const StyledLink = styled(Link)`
+color: white;
+text-decoration: none;
+margin: 1rem;
+position relative;
+&:hover, &:focus {
+  color: yellow;
+}
+&:active{
+  color: red;
+}
+`;
 
 const Findjob = () => {
   const [search, setSearch] = useState("");
@@ -20,11 +36,11 @@ const Findjob = () => {
 
   return (
     <div className="findJobContainer">
-      <h2>Search Job here</h2>
+      <h2 style={{ color: "white", fontSize: "50px" }}>Search Job here</h2>
       <div className="inputContainer">
         <input
           text="type"
-          placeholder="Search job position"
+          placeholder=" Search job position"
           onChange={debounce((event) => {
             setSearch(event.target.value);
           })}
@@ -46,12 +62,16 @@ const Findjob = () => {
           return (
             <div className="jobCards" key={key}>
               <h3>{jobs.position}</h3>
-              <p>Company: {jobs.company}</p>
-              <p>Experience: {jobs.experience}</p>
-              <p>Location: {jobs.location}</p>
-              <button type="button">
-                <a href={jobs.page}>Apply</a>
-              </button>
+              <div className="jobDesc">
+                <p>Company: {jobs.company}</p>
+                <p>Experience: {jobs.experience}</p>
+                <p>Location: {jobs.location}</p>
+              </div>
+              <div className="findJobButtonDiv">
+                <StyledLink to={jobs.page} className="findJobButton">
+                  <Button>Apply</Button>
+                </StyledLink>
+              </div>
             </div>
           );
         })}
