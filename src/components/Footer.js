@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
         </div>
         
-        <div> <b>Copyright Hello!Work</b> </div>
+        <div> <b>Copyright <i class="bi bi-c-circle"></i> Hello!Work</b> </div>
     </footer>
   )
 }

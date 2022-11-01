@@ -30,8 +30,8 @@ const Aboutus = () => {
         <div>
           <h2>About Us</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! At, itaque eius fugiat quo saepe quasi voluptatum, quas ea, numquam quisquam sunt! Eveniet minus deleniti in nesciunt voluptatem ratione sit! Optio ut porro voluptates magnam commodi dicta tenetur cupiditate, necessitatibus nobis est inventore nisi nemo perferendis quidem adipisci iste suscipit error.</p>
-          <StyledLink><Button href='#developers'>See Developers</Button></StyledLink>
-          <button><a href="#developers">See Developers</a></button>
+          
+          <button className='todev'><a href="#developers">See Developers  <i class="bi bi-arrow-right"></i></a></button>
         </div>
       </div>
       <div id='developers' className='developers'>

@@ -14,3 +14,17 @@
 .developers{
     padding: 15px;
 }
+
+.todev{
+    background-color: #fbb631;
+    padding: 5px 10px;
+    border: none;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.todev > a{
+    text-decoration: none;
+    color: black;
+}
+
