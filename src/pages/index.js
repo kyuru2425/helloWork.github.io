@@ -7,6 +7,7 @@ import Aboutus from "./aboutus";
 import Login from "./login";
 import Contactus from "./contactus";
 import Footer from "../components/Footer";
+import Registration from "../pages/registration"
 
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
         <Route exact path="/aboutus" element={<Aboutus />} />
         <Route exact path="/contactus" element={<Contactus />} />
         <Route exact path="/login" element={<Login />} />
+        <Route exact path="/registration" element={<Registration />} />
       </Routes>
       <Footer />
     </Router>

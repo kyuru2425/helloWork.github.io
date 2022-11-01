@@ -12,10 +12,10 @@ body {
         width: 400px;
         height: 490px;
         padding: 40px;
-        position: absolute;
+        /* position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate( 10%, -60%);
+        transform: translate( 10%, -60%); */
         background-color: #aecefe;
         border-radius: 0.5rem ;
         
@@ -23,7 +23,7 @@ body {
     
     
     }
-    .box input[type = "text"], .box input[type="password"] {
+    .box input[type = "email"], .box input[type="password"] {
         border: 2px solid #2ecc71;
         background: white;
         display:block;
@@ -72,10 +72,14 @@ body {
 }
 
 
-img {
+/* .login {
     height: 490px;
-    width: 550px;
-    transform: translate(-42.5%, 30%);
-    border-radius: 1rem;
-}
+    width: 550px; */
+    /* transform: translate(-42.5%, 30%); */
+    /* border-radius: 1rem;
+} */
 
+.login_container{
+    display: flex;
+    
+}
