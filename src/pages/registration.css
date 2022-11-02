@@ -11,15 +11,18 @@
   display: flex;
   justify-content: center;
 }
+#registerForm input[type="text"],
+#registerForm input[type="email"],
+#registerForm input[type="password"],
+#registerForm input[type="number"],
+#registerForm select {
+  border: 1px solid #1976d2;
+}
 .regButton {
   background-color: #fbb631;
+  border: 0;
 }
 .regButton:hover {
   background-color: white;
+  border: none;
 }
-#registerForm > input {
-  border: 1px solid #1976d2;
-}
-
-
-

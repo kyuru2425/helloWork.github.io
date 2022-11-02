@@ -91,13 +91,15 @@ const Registration = () => {
   function checkCPassword() {
     const passVal = userPASS.current.value.trim();
     const cpassVal = userCPASS.current.value.trim();
-    
+
     let x = 0;
     console.log(cpassVal);
 
     if (isEmpty(cpassVal)) {
       console.log("Password Empty");
-      document.getElementById("passerr").innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
+      document.getElementById(
+        "passerr"
+      ).innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
       document.getElementById("passerr").style.color = "red";
     } else if (passVal !== cpassVal) {
       console.log("not following");
@@ -329,8 +331,7 @@ const Registration = () => {
               <small id="Lnamerr"></small>
             </div>
           </div>
-          
-          
+
           <br />
 
           <label for="useremail">Email: </label>
@@ -365,8 +366,6 @@ const Registration = () => {
           />
           <small id="passerr"></small>
           <br />
-
-          
 
           <label for="address">Address</label>
           <input
@@ -414,7 +413,6 @@ const Registration = () => {
               <br />
             </div>
           </div>
-          
 
           <div>
             <label for="gender">Sex: </label>
