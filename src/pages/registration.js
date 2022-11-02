@@ -97,17 +97,17 @@ const Registration = () => {
 
     if (isEmpty(cpassVal)) {
       console.log("Password Empty");
-      document.getElementById("passerr").innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
-      document.getElementById("passerr").style.color = "red";
+      document.getElementById("cpasserr").innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
+      document.getElementById("cpasserr").style.color = "red";
     } else if (passVal !== cpassVal) {
       console.log("not following");
       document.getElementById(
         "passerr"
       ).innerHTML = `Password Incorrect, Must Contain Same Input of Password`;
-      document.getElementById("passerr").style.color = "red";
+      document.getElementById("cpasserr").style.color = "red";
     } else {
       console.log(`Nice!`);
-      document.getElementById("passerr").innerHTML = ``;
+      document.getElementById("cpasserr").innerHTML = ``;
       x = 1;
     }
     return x;
@@ -314,6 +314,7 @@ const Registration = () => {
                 id="username"
                 ref={userFNAME}
                 className="form-control"
+                placeholder="First Name"
               />
               <small id="Fnamerr"></small>
             </div>
@@ -325,6 +326,7 @@ const Registration = () => {
                 id="username"
                 ref={userLNAME}
                 className="form-control"
+                placeholder="Last Name"
               />
               <small id="Lnamerr"></small>
             </div>
@@ -340,6 +342,7 @@ const Registration = () => {
             id="useremail"
             ref={userEMAIL}
             className="form-control"
+            placeholder="example@mail.com"
           />
           <small id="emailerr"></small>
           <br />
@@ -351,6 +354,7 @@ const Registration = () => {
             id="password"
             ref={userPASS}
             className="form-control"
+            placeholder="At least 1-Uppercase, 1-Lowercase, 1-special character, and 1-number"
           />
           <small id="passerr"></small>
           <br />
@@ -363,7 +367,7 @@ const Registration = () => {
             ref={userCPASS}
             className="form-control"
           />
-          <small id="passerr"></small>
+          <small id="cpasserr"></small>
           <br />
 
           
