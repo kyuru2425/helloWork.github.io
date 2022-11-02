@@ -28,7 +28,13 @@ textarea {
 .contactUsContainer {
   display: flex;
   justify-content: space-around;
+
   height: 95vh;
+}
+.contactUsImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .contactUsButton {
   margin-top: 30px;
@@ -39,5 +45,8 @@ textarea {
   .contactUsContainer,
   .mainContainer {
     height: 100%;
+  }
+  .contactUsImage {
+    display: none;
   }
 }

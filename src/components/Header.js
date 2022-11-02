@@ -11,6 +11,10 @@ import styled from "styled-components";
 import logo from "../images/logo.png";
 import { height } from "@mui/system";
 
+let isLogInStatus = localStorage.getItem("isLogIn")
+  ? JSON.parse(localStorage.getItem("isLogIn"))
+  : [];
+
 const Navlist = styled.a`
   text-decoration: none;
 `;
@@ -67,7 +71,7 @@ const Header = () => {
                 to="/login"
                 style={{ backgroundColor: "#fbb631", color: "black" }}
               >
-                <Button color="inherit">Login</Button>
+                <Button color="inherit">Log In</Button>
               </StyledLink>
             </Navlist>
           </Toolbar>

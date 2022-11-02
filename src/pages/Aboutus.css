@@ -11,7 +11,11 @@
 
   font-size: large;
 }
-
+.aboutUsImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .tocol {
   display: flex;
   flex-direction: column;
@@ -30,7 +34,7 @@
   background-color: #fbb631;
   padding: 5px 10px;
   border: none;
-  margin-top: 50px;
+  margin-top: 40px;
 
   border-radius: 8px;
 }
@@ -41,12 +45,17 @@
 }
 .aboutUs {
   padding-top: 80px;
-  min-width: 40vw;
+  width: 40vw;
   text-align: justify;
+  height: 100%;
 }
 @media screen and (max-width: 1000px) {
   .torow {
     height: 100%;
+  }
+
+  .aboutUsImg {
+    display: none;
   }
 }
 @media screen and (max-width: 600px) {
