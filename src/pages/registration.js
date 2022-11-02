@@ -12,7 +12,9 @@ const Registration = () => {
 
   let userID = useRef("");
   let userPASS = useRef("");
-  let userNAME = useRef("");
+  let userCPASS = useRef("");
+  let userFNAME = useRef("");
+  let userLNAME = useRef("");
   let userEMAIL = useRef("");
   let userZIP = useRef("");
   let userCOUNTRY = useRef("");
@@ -24,10 +26,12 @@ const Registration = () => {
     let ctr = 0;
     let ret = 0;
 
-    ret = checkUID() === 1 ? ctr++ : ctr;
+    //ret = checkUID() === 1 ? ctr++ : ctr;
 
-    ret = checkUsername() == 1 ? ctr++ : ctr;
+    ret = checkUserFname() == 1 ? ctr++ : ctr;
+    ret = checkUserLname() == 1 ? ctr++ : ctr;
     ret = checkPassword() == 1 ? ctr++ : ctr;
+    ret = checkCPassword() == 1 ? ctr++ : ctr;
     ret = checkEmail() == 1 ? ctr++ : ctr;
     ret = checkZipcode() == 1 ? ctr++ : ctr;
 
@@ -35,10 +39,11 @@ const Registration = () => {
     ret = checkCountry() == 1 ? ctr++ : ctr;
     console.log(ctr);
 
-    if (ctr == 7) {
+    if (ctr == 8) {
       // checks if all validation is correct;
       addToLocalStorage();
-      alert(`Successfully Saved to The Local Storage`);
+      //alert(`Successfully Saved to The Local Storage`);
+      window.location.href = "/login";
     } else {
       alert(`Invalid Registration`);
       console.log(`Invalid Registration`);
@@ -82,6 +87,32 @@ const Registration = () => {
     return x;
   }
 
+  // checking for check password
+  function checkCPassword() {
+    const passVal = userPASS.current.value.trim();
+    const cpassVal = userCPASS.current.value.trim();
+    
+    let x = 0;
+    console.log(cpassVal);
+
+    if (isEmpty(cpassVal)) {
+      console.log("Password Empty");
+      document.getElementById("passerr").innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
+      document.getElementById("passerr").style.color = "red";
+    } else if (passVal !== cpassVal) {
+      console.log("not following");
+      document.getElementById(
+        "passerr"
+      ).innerHTML = `Password Incorrect, Must Contain Same Input of Password`;
+      document.getElementById("passerr").style.color = "red";
+    } else {
+      console.log(`Nice!`);
+      document.getElementById("passerr").innerHTML = ``;
+      x = 1;
+    }
+    return x;
+  }
+
   // checking for password
   function checkPassword() {
     const passVal = userPASS.current.value.trim();
@@ -115,21 +146,41 @@ const Registration = () => {
   }
 
   // checkin for user's name
-  function checkUsername() {
-    const unameVal = userNAME.current.value;
+  function checkUserFname() {
+    const unameVal = userFNAME.current.value;
     let x = 0;
     console.log(unameVal);
     if (isEmpty(unameVal)) {
       console.log("Name Empty");
-      document.getElementById("namerr").innerHTML = `Required`;
-      document.getElementById("namerr").style.color = "red";
+      document.getElementById("Fnamerr").innerHTML = `Required`;
+      document.getElementById("Fnamerr").style.color = "red";
     } else if (!isAlpha) {
       console.log("Only Alphabet");
-      document.getElementById("namerr").innerHTML = `Only Alphabet`;
-      document.getElementById("namerr").style.color = "red";
+      document.getElementById("Fnamerr").innerHTML = `Only Alphabet`;
+      document.getElementById("Fnamerr").style.color = "red";
     } else {
       console.log(`Nice!`);
-      document.getElementById("namerr").innerHTML = ``;
+      document.getElementById("Fnamerr").innerHTML = ``;
+      x = 1;
+    }
+    return x;
+  }
+  // checkin for user's name
+  function checkUserLname() {
+    const unameVal = userLNAME.current.value;
+    let x = 0;
+    console.log(unameVal);
+    if (isEmpty(unameVal)) {
+      console.log("Name Empty");
+      document.getElementById("Lnamerr").innerHTML = `Required`;
+      document.getElementById("Lnamerr").style.color = "red";
+    } else if (!isAlpha) {
+      console.log("Only Alphabet");
+      document.getElementById("Lnamerr").innerHTML = `Only Alphabet`;
+      document.getElementById("Lnamerr").style.color = "red";
+    } else {
+      console.log(`Nice!`);
+      document.getElementById("Lnamerr").innerHTML = ``;
       x = 1;
     }
     return x;
@@ -223,8 +274,9 @@ const Registration = () => {
   function addToLocalStorage() {
     const user = {
       id: Date.now(),
-      userid: userID.current.value,
-      username: userNAME.current.value,
+      // userid: userID.current.value,
+      userFname: userFNAME.current.value,
+      userLname: userLNAME.current.value,
       userpass: userPASS.current.value,
       address: userADD.current.value,
       country: userCOUNTRY.current.value,
@@ -242,7 +294,7 @@ const Registration = () => {
       <div className="registrationContainer">
         <h2>Registration Form</h2>
         <form action="" method="get" id="registerForm" onSubmit={handleSubmit}>
-          <label for="userid">User ID: </label>
+          {/* <label for="userid">User ID: </label>
           <input
             type="number"
             name="userid"
@@ -251,6 +303,45 @@ const Registration = () => {
             className="form-control"
           />
           <small id="iderr"></small>
+          <br /> */}
+
+          <div class="row">
+            <div class="col-6">
+              <label for="username">First Name: </label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                ref={userFNAME}
+                className="form-control"
+              />
+              <small id="Fnamerr"></small>
+            </div>
+            <div class="col-6">
+              <label for="username">Last Name: </label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                ref={userLNAME}
+                className="form-control"
+              />
+              <small id="Lnamerr"></small>
+            </div>
+          </div>
+          
+          
+          <br />
+
+          <label for="useremail">Email: </label>
+          <input
+            type="email"
+            name="useremail"
+            id="useremail"
+            ref={userEMAIL}
+            className="form-control"
+          />
+          <small id="emailerr"></small>
           <br />
 
           <label for="password">Password: </label>
@@ -264,16 +355,18 @@ const Registration = () => {
           <small id="passerr"></small>
           <br />
 
-          <label for="username">Name: </label>
+          <label for="password">Confirm Password: </label>
           <input
-            type="text"
-            name="username"
-            id="username"
-            ref={userNAME}
+            type="password"
+            name="password"
+            id="password"
+            ref={userCPASS}
             className="form-control"
           />
-          <small id="namerr"></small>
+          <small id="passerr"></small>
           <br />
+
+          
 
           <label for="address">Address</label>
           <input
@@ -321,16 +414,7 @@ const Registration = () => {
               <br />
             </div>
           </div>
-          <label for="useremail">Email: </label>
-          <input
-            type="email"
-            name="useremail"
-            id="useremail"
-            ref={userEMAIL}
-            className="form-control"
-          />
-          <small id="emailerr"></small>
-          <br />
+          
 
           <div>
             <label for="gender">Sex: </label>

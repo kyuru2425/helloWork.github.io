@@ -5,6 +5,7 @@ import wfh from "../images/Login-rafiki.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Index from "./index";
+import Home from "./home";
 
 const StyledLink = styled(Link)`
     color: red;
@@ -43,8 +44,8 @@ const Login = () => {
       alert("Email not registered");
     } else {
       if (filtered.userpass === passwordRef.current.value) {
-        //window.location.href = "http://localhost:3000/";
-        <Index />;
+        window.location.href = "http://localhost:3000/";
+        // <Home />;
       } else {
         alert("wrong password");
       }
