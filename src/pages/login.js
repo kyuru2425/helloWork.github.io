@@ -26,25 +26,25 @@ let lists = localStorage.getItem("userRegistration")
 const Login = () => {
   let emailRef = useRef("");
   let passwordRef = useRef("");
-  // let [id,setId]= useState(Date.now());
-  // let [infoList, setInfoList] = useState ([])
+  let [id, setId] = useState(Date.now());
+  let [infoList, setInfoList] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // let info = {
-    //   id: id,
-    //   userName: userRefName.current.value,
-    //   passWord: passRefWord.current.value,
-
-    // };
+    let info = {
+      id: id,
+      email: emailRef.current.value,
+      passWord: passwordRef.current.value,
+    };
 
     let filtered = lists.find((item) => item.email === emailRef.current.value);
     if (filtered === undefined) {
       alert("Email not registered");
     } else {
       if (filtered.userpass === passwordRef.current.value) {
-        //window.location.href = "http://localhost:3000/";
-        <Index />;
+        window.location.href = "http://localhost:3000/";
+        // <Index />;
+        setInfoList([...infoList, info]);
       } else {
         alert("wrong password");
       }
@@ -52,11 +52,14 @@ const Login = () => {
 
     // /setInfoList([...infoList, info])
     //alert(JSON.stringify(info));
+    setId(Date.now);
+    emailRef.current.value = "";
+    passwordRef.current.value = "";
   };
-  // useEffect (
-  //   () => localStorage.setItem("Contact_Us", JSON.stringify(infoList)),
-  //   [infoList]
-  // );
+  useEffect(
+    () => localStorage.setItem("isLogIn", JSON.stringify(infoList)),
+    [infoList]
+  );
 
   return (
     <div className="mainContainer">

@@ -1,7 +1,18 @@
 import React from "react";
 import "./JobDescription.css";
+import { useRef } from "react";
 
 const JobDescription = () => {
+  let resumeRef = useRef("");
+
+  const emailSent = () => {
+    if (resumeRef.current.value == "") {
+      alert("Upload Resume First");
+    } else {
+      alert("Email Sent");
+    }
+    resumeRef.current.value = "";
+  };
   return (
     <div className="jobDescription">
       <h1>Junior Front-end Web Developer</h1>
@@ -102,12 +113,28 @@ const JobDescription = () => {
         </ul>
       </div>
       <br />
+      <div style={{ display: "flex", alignItems: "flex-start" }}>
+        <form>
+          <label
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+              color: "#1976d2",
+            }}
+          >
+            Upload your Resume
+          </label>
+          <br />
+
+          <input type="file" name="resume" ref={resumeRef}></input>
+        </form>
+      </div>
       <div>
         <h2>
           Join this <span>Amazing </span>Company
         </h2>
         <br />
-        <button className="applyButton">
+        <button className="applyButton" type="button" onClick={emailSent}>
           <h2>APPLY</h2>
         </button>
       </div>
