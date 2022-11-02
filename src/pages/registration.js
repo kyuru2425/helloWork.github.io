@@ -43,6 +43,7 @@ const Registration = () => {
       // checks if all validation is correct;
       addToLocalStorage();
       //alert(`Successfully Saved to The Local Storage`);
+      alert("Registration Successful");
       window.location.href = "/login";
     } else {
       alert(`Invalid Registration`);
@@ -97,19 +98,15 @@ const Registration = () => {
 
     if (isEmpty(cpassVal)) {
       console.log("Password Empty");
-<<<<<<< HEAD
+
       document.getElementById(
-        "passerr"
+        "cpasserr"
       ).innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
-      document.getElementById("passerr").style.color = "red";
-=======
-      document.getElementById("cpasserr").innerHTML = `Password Must Not Be Blank And Contain Same Input of Password`;
       document.getElementById("cpasserr").style.color = "red";
->>>>>>> cf5ee260cf14adf0e22ca0471bbfa623ec1ec053
     } else if (passVal !== cpassVal) {
       console.log("not following");
       document.getElementById(
-        "passerr"
+        "cpasserr"
       ).innerHTML = `Password Incorrect, Must Contain Same Input of Password`;
       document.getElementById("cpasserr").style.color = "red";
     } else {
@@ -209,6 +206,14 @@ const Registration = () => {
       document.getElementById(
         "emailerr"
       ).innerHTML = `Please Input The Correct Email Pattern. ex. "example@mail.com"`;
+      document.getElementById("emailerr").style.color = "red";
+    } else if (
+      userData.find((x) => x.email === userEMAIL.current.value) != undefined
+    ) {
+      console.log(userData.find((x) => x.email));
+      document.getElementById(
+        "emailerr"
+      ).innerHTML = `This Email is already registered`;
       document.getElementById("emailerr").style.color = "red";
     } else {
       console.log(`Valid`);
@@ -314,7 +319,9 @@ const Registration = () => {
 
           <div class="row">
             <div class="col-6">
-              <label for="username">First Name: </label>
+              <label for="username">
+                First Name<span style={{ color: "red" }}>*</span>:
+              </label>
               <input
                 type="text"
                 name="username"
@@ -326,7 +333,9 @@ const Registration = () => {
               <small id="Fnamerr"></small>
             </div>
             <div class="col-6">
-              <label for="username">Last Name: </label>
+              <label for="username">
+                Last Name<span style={{ color: "red" }}>*</span>:{" "}
+              </label>
               <input
                 type="text"
                 name="username"
@@ -341,7 +350,9 @@ const Registration = () => {
 
           <br />
 
-          <label for="useremail">Email: </label>
+          <label for="useremail">
+            Email<span style={{ color: "red" }}>*</span>:{" "}
+          </label>
           <input
             type="email"
             name="useremail"
@@ -353,7 +364,9 @@ const Registration = () => {
           <small id="emailerr"></small>
           <br />
 
-          <label for="password">Password: </label>
+          <label for="password">
+            Password<span style={{ color: "red" }}>*</span>:{" "}
+          </label>
           <input
             type="password"
             name="password"
@@ -365,7 +378,9 @@ const Registration = () => {
           <small id="passerr"></small>
           <br />
 
-          <label for="password">Confirm Password: </label>
+          <label for="password">
+            Confirm Password<span style={{ color: "red" }}>*</span>:{" "}
+          </label>
           <input
             type="password"
             name="password"
@@ -387,7 +402,9 @@ const Registration = () => {
 
           <div class="row">
             <div class="col-6">
-              <label for="country">Country: </label>
+              <label for="country">
+                Country<span style={{ color: "red" }}>*</span>:{" "}
+              </label>
               <select
                 name="country"
                 id="country"
@@ -410,7 +427,9 @@ const Registration = () => {
               <br />
             </div>
             <div class="col-6">
-              <label for="zipcode">ZIP Code: </label>
+              <label for="zipcode">
+                ZIP Code<span style={{ color: "red" }}>*</span>:{" "}
+              </label>
               <input
                 type="number"
                 name="zipcode"
@@ -424,7 +443,9 @@ const Registration = () => {
           </div>
 
           <div>
-            <label for="gender">Sex: </label>
+            <label for="gender">
+              Sex<span style={{ color: "red" }}>*</span>:{" "}
+            </label>
             <input
               type="radio"
               name="gender"

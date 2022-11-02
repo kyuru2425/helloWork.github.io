@@ -14,7 +14,7 @@ import { height } from "@mui/system";
 let isLogInStatus = localStorage.getItem("isLogIn")
   ? JSON.parse(localStorage.getItem("isLogIn"))
   : [];
-
+console.log(isLogInStatus);
 const Navlist = styled.a`
   text-decoration: none;
 `;
@@ -34,7 +34,23 @@ const StyledLink = styled(Link)`
     }
   `;
 
+if (isLogInStatus == "") {
+  window.onload = function () {
+    document.getElementById("logOut").style.display = "none";
+    document.getElementById("logIn").style.display = "inline-block";
+  };
+} else {
+  window.onload = function () {
+    document.getElementById("logOut").style.display = "inline-block";
+    document.getElementById("logIn").style.display = "none";
+  };
+}
 const Header = () => {
+  const logOutStatus = "none";
+  function clearLocalStorage() {
+    localStorage.removeItem("isLogIn");
+    window.location.href = "/";
+  }
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -67,12 +83,25 @@ const Header = () => {
               <StyledLink to="/contactus">
                 <Button color="inherit">Contact Us</Button>
               </StyledLink>
-              <StyledLink
-                to="/login"
-                style={{ backgroundColor: "#fbb631", color: "black" }}
-              >
-                <Button color="inherit">Log In</Button>
-              </StyledLink>
+              <span id="logIn">
+                <StyledLink
+                  to="/login"
+                  style={{ backgroundColor: "#fbb631", color: "black" }}
+                >
+                  <Button color="inherit">Log In</Button>
+                </StyledLink>
+              </span>
+
+              <span id="logOut">
+                <StyledLink
+                  to="/"
+                  style={{ backgroundColor: "#fff", color: "black" }}
+                >
+                  <Button color="inherit" onClick={clearLocalStorage}>
+                    Log Out
+                  </Button>
+                </StyledLink>
+              </span>
             </Navlist>
           </Toolbar>
         </AppBar>

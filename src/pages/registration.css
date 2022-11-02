@@ -26,3 +26,9 @@
   background-color: white;
   border: none;
 }
+@media screen and (max-width: 1000px) {
+  .registrationContainer {
+    width: 100%;
+    padding: 2%;
+  }
+}

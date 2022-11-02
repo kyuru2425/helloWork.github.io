@@ -2,11 +2,17 @@ import React from "react";
 import "./JobDescription.css";
 import { useRef } from "react";
 
+let islogIn = localStorage.getItem("isLogIn")
+  ? JSON.parse(localStorage.getItem("isLogIn"))
+  : [];
+
 const JobDescription = () => {
   let resumeRef = useRef("");
-
   const emailSent = () => {
-    if (resumeRef.current.value == "") {
+    if (islogIn == "") {
+      alert("log in first");
+      window.location.href = "/login";
+    } else if (resumeRef.current.value == "") {
       alert("Upload Resume First");
     } else {
       alert("Email Sent");
