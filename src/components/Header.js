@@ -10,10 +10,9 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import { height } from "@mui/system";
-import DrawerComp from './Drawer'
-import useMediaQuery from '@mui/material/useMediaQuery';
+import DrawerComp from "./Drawer";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material";
-
 
 let isLogInStatus = localStorage.getItem("isLogIn")
   ? JSON.parse(localStorage.getItem("isLogIn"))
@@ -55,9 +54,9 @@ const Header = () => {
     localStorage.removeItem("isLogIn");
     window.location.href = "/";
   }
-  const theme= useTheme();
+  const theme = useTheme();
   console.log(theme);
-  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   console.log(isMatch);
   return (
     <div>
@@ -78,13 +77,12 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             ></Typography>
-            {
-              isMatch?(
-                <>
-                  <DrawerComp/>
-                </>
-              ):(
-                <Navlist>
+            {isMatch ? (
+              <>
+                <DrawerComp />
+              </>
+            ) : (
+              <Navlist>
                 <StyledLink to="/">
                   <Button color="inherit">Home</Button>
                 </StyledLink>
@@ -97,29 +95,29 @@ const Header = () => {
                 <StyledLink to="/contactus">
                   <Button color="inherit">Contact Us</Button>
                 </StyledLink>
-                </Navlist>
-              )}
-                <Navlist>
-                <span id="logIn">
-                  <StyledLink
-                    to="/login"
-                    style={{ backgroundColor: "#fbb631", color: "black" }}
-                  >
-                    <Button color="inherit">Log In</Button>
-                  </StyledLink>
-                </span>
-  
-                <span id="logOut">
-                  <StyledLink
-                    to="/"
-                    style={{ backgroundColor: "#fff", color: "black" }}
-                  >
-                    <Button color="inherit" onClick={clearLocalStorage}>
-                      Log Out
-                    </Button>
-                  </StyledLink>
-                </span>
               </Navlist>
+            )}
+            <Navlist>
+              <span id="logIn">
+                <StyledLink
+                  to="/login"
+                  style={{ backgroundColor: "#fbb631", color: "black" }}
+                >
+                  <Button color="inherit">Log In</Button>
+                </StyledLink>
+              </span>
+
+              <span id="logOut">
+                <StyledLink
+                  to="/"
+                  style={{ backgroundColor: "#fff", color: "black" }}
+                >
+                  <Button color="inherit" onClick={clearLocalStorage}>
+                    Log Out
+                  </Button>
+                </StyledLink>
+              </span>
+            </Navlist>
             {/* <Navlist>
               <StyledLink to="/">
                 <Button color="inherit">Home</Button>
@@ -141,11 +139,10 @@ const Header = () => {
                   <Button color="inherit">Log In</Button>
                 </StyledLink>
               </span>
-
               <span id="logOut">
                 <StyledLink
                   to="/"
-                  style={{ backgroundColor: "orangered", color: "white" }}
+                  style={{ backgroundColor: "#fff", color: "black" }}
                 >
                   <Button color="inherit" onClick={clearLocalStorage}>
                     Log Out
@@ -154,8 +151,6 @@ const Header = () => {
               </span>
             </Navlist> */}
           </Toolbar>
-          
-          
         </AppBar>
       </Box>
     </div>
