@@ -95,7 +95,7 @@ const Header = () => {
               <span id="logOut">
                 <StyledLink
                   to="/"
-                  style={{ backgroundColor: "#fff", color: "black" }}
+                  style={{ backgroundColor: "orangered", color: "white" }}
                 >
                   <Button color="inherit" onClick={clearLocalStorage}>
                     Log Out
