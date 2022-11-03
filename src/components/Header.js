@@ -10,6 +10,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../images/logo.png";
 import { height } from "@mui/system";
+import DrawerComp from './Drawer'
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from "@mui/material";
+
 
 let isLogInStatus = localStorage.getItem("isLogIn")
   ? JSON.parse(localStorage.getItem("isLogIn"))
@@ -51,6 +55,10 @@ const Header = () => {
     localStorage.removeItem("isLogIn");
     window.location.href = "/";
   }
+  const theme= useTheme();
+  console.log(theme);
+  const isMatch = useMediaQuery(theme.breakpoints.down('md'));
+  console.log(isMatch);
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
@@ -70,7 +78,49 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1 }}
             ></Typography>
-            <Navlist>
+            {
+              isMatch?(
+                <>
+                  <DrawerComp/>
+                </>
+              ):(
+                <Navlist>
+                <StyledLink to="/">
+                  <Button color="inherit">Home</Button>
+                </StyledLink>
+                <StyledLink to="/findjob">
+                  <Button color="inherit">Find a Job</Button>
+                </StyledLink>
+                <StyledLink to="/aboutus">
+                  <Button color="inherit">About Us</Button>
+                </StyledLink>
+                <StyledLink to="/contactus">
+                  <Button color="inherit">Contact Us</Button>
+                </StyledLink>
+                </Navlist>
+              )}
+                <Navlist>
+                <span id="logIn">
+                  <StyledLink
+                    to="/login"
+                    style={{ backgroundColor: "#fbb631", color: "black" }}
+                  >
+                    <Button color="inherit">Log In</Button>
+                  </StyledLink>
+                </span>
+  
+                <span id="logOut">
+                  <StyledLink
+                    to="/"
+                    style={{ backgroundColor: "#fff", color: "black" }}
+                  >
+                    <Button color="inherit" onClick={clearLocalStorage}>
+                      Log Out
+                    </Button>
+                  </StyledLink>
+                </span>
+              </Navlist>
+            {/* <Navlist>
               <StyledLink to="/">
                 <Button color="inherit">Home</Button>
               </StyledLink>
@@ -102,8 +152,10 @@ const Header = () => {
                   </Button>
                 </StyledLink>
               </span>
-            </Navlist>
+            </Navlist> */}
           </Toolbar>
+          
+          
         </AppBar>
       </Box>
     </div>
