@@ -43,7 +43,7 @@ const Login = () => {
       alert("Email not registered");
     } else {
       if (filtered.userpass === passwordRef.current.value) {
-        window.location.href = "https://kyuru2425.github.io/helloWork.github.io/home";
+        window.location.href = "https://kyuru2425.github.io/helloWork.github.io/";
 
         setInfoList([...infoList, info]);
       } else {
