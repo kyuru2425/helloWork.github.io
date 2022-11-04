@@ -47,16 +47,16 @@ const Footer = () => {
             <h2>Quick Links</h2>
 
             <div>
-              <StyledLink to="/">
+              <StyledLink to="/helloWork.github.io/">
                 <Button color="inherit">Home</Button>
               </StyledLink>
-              <StyledLink to="/findjob">
+              <StyledLink to="/helloWork.github.io/findjob">
                 <Button color="inherit">Find a Job</Button>
               </StyledLink>
-              <StyledLink to="/aboutus">
+              <StyledLink to="/helloWork.github.io/aboutus">
                 <Button color="inherit">About Us</Button>
               </StyledLink>
-              <StyledLink to="/contactus">
+              <StyledLink to="/helloWork.github.io/contactus">
                 <Button color="inherit">Contact Us</Button>
               </StyledLink>
             </div>
