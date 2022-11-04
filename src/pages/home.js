@@ -33,7 +33,7 @@ const Home = () => {
             eos aperiam laudantium explicabo tenetur quis libero iste nihil eius
             eligendi cum sapiente.
           </p>
-          <StyledLink to="/findjob" className="findJobButton">
+          <StyledLink to="/helloWork.github.io/findjob" className="findJobButton">
             <Button>
               <i class="bi bi-search"></i> Find a Job
             </Button>
