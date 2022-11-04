@@ -15,13 +15,13 @@ const Index = () => {
     <Router>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/findjob" element={<Findjob />} />
-        <Route exact path="/aboutus" element={<Aboutus />} />
-        <Route exact path="/contactus" element={<Contactus />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/registration" element={<Registration />} />
-        <Route exact path="/JobDescription" element={<JobDescription />} />
+        <Route exact path="/helloWork.github.io/" element={<Home />} />
+        <Route exact path="/helloWork.github.io/findjob" element={<Findjob />} />
+        <Route exact path="/helloWork.github.io/aboutus" element={<Aboutus />} />
+        <Route exact path="/helloWork.github.io/contactus" element={<Contactus />} />
+        <Route exact path="/helloWork.github.io/login" element={<Login />} />
+        <Route exact path="/helloWork.github.io/registration" element={<Registration />} />
+        <Route exact path="/helloWork.github.io/JobDescription" element={<JobDescription />} />
       </Routes>
       <Footer />
     </Router>

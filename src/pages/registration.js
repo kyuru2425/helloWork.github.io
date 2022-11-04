@@ -44,7 +44,7 @@ const Registration = () => {
       addToLocalStorage();
       //alert(`Successfully Saved to The Local Storage`);
       alert("Registration Successful");
-      window.location.href = "/login";
+      window.location.href = "/helloWork.github.io/login";
     } else {
       alert(`Invalid Registration`);
       console.log(`Invalid Registration`);

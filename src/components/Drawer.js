@@ -71,7 +71,7 @@ const DrawerComp = () => {
                 <ListItemButton>
                     <ListItemIcon>
                         <Navlist>
-                            <ListItemText><StyledLink to="/"><Button>Home</Button></StyledLink></ListItemText>
+                            <ListItemText><StyledLink to="/helloWork.github.io/"><Button>Home</Button></StyledLink></ListItemText>
                         </Navlist>
                     </ListItemIcon>
                 </ListItemButton>
@@ -80,7 +80,7 @@ const DrawerComp = () => {
                 <ListItemButton>
                     <ListItemIcon>
                         <Navlist>
-                            <ListItemText><StyledLink to="/findjob"><Button>Find a Job</Button></StyledLink></ListItemText>
+                            <ListItemText><StyledLink to="/helloWork.github.io/findjob"><Button>Find a Job</Button></StyledLink></ListItemText>
                         </Navlist>
                     </ListItemIcon>
                 </ListItemButton>
@@ -89,7 +89,7 @@ const DrawerComp = () => {
                 <ListItemButton>
                     <ListItemIcon>
                         <Navlist>
-                            <ListItemText><StyledLink to="/aboutus"><Button>About Us</Button></StyledLink></ListItemText>
+                            <ListItemText><StyledLink to="/helloWork.github.io/aboutus"><Button>About Us</Button></StyledLink></ListItemText>
                         </Navlist>
                     </ListItemIcon>
                 </ListItemButton>
@@ -98,7 +98,7 @@ const DrawerComp = () => {
                 <ListItemButton>
                     <ListItemIcon>
                         <Navlist>
-                            <ListItemText><StyledLink to="/contactus"><Button>Contact Us</Button></StyledLink></ListItemText>
+                            <ListItemText><StyledLink to="/helloWork.github.io/contactus"><Button>Contact Us</Button></StyledLink></ListItemText>
                         </Navlist>
                     </ListItemIcon>
                 </ListItemButton>

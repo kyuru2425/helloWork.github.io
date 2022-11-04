@@ -83,16 +83,16 @@ const Header = () => {
               </>
             ) : (
               <Navlist>
-                <StyledLink to="/">
+                <StyledLink to="/helloWork.github.io/">
                   <Button color="inherit">Home</Button>
                 </StyledLink>
-                <StyledLink to="/findjob">
+                <StyledLink to="/helloWork.github.io/findjob">
                   <Button color="inherit">Find a Job</Button>
                 </StyledLink>
-                <StyledLink to="/aboutus">
+                <StyledLink to="/helloWork.github.io/aboutus">
                   <Button color="inherit">About Us</Button>
                 </StyledLink>
-                <StyledLink to="/contactus">
+                <StyledLink to="/helloWork.github.io/contactus">
                   <Button color="inherit">Contact Us</Button>
                 </StyledLink>
               </Navlist>
@@ -100,7 +100,7 @@ const Header = () => {
             <Navlist>
               <span id="logIn">
                 <StyledLink
-                  to="/login"
+                  to="/helloWork.github.io/login"
                   style={{ backgroundColor: "#fbb631", color: "black" }}
                 >
                   <Button color="inherit">Log In</Button>
@@ -109,7 +109,7 @@ const Header = () => {
 
               <span id="logOut">
                 <StyledLink
-                  to="/"
+                  to="/helloWork.github.io/"
                   style={{ backgroundColor: "#fff", color: "black" }}
                 >
                   <Button color="inherit" onClick={clearLocalStorage}>
