@@ -98,7 +98,7 @@ const Login = () => {
             <br />
             <label>
               Not Yet Registered?
-              <StyledLink to="/registration">Sign up</StyledLink>
+              <StyledLink to="/helloWork.github.io/registration">Sign up</StyledLink>
             </label>
             <br />
             <br />
