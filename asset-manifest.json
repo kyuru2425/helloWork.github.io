@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/helloWork.github.io/static/css/main.fc5921a4.css",
-    "main.js": "/helloWork.github.io/static/js/main.f36a5aac.js",
+    "main.js": "/helloWork.github.io/static/js/main.d531df63.js",
     "static/js/787.6aeb8814.chunk.js": "/helloWork.github.io/static/js/787.6aeb8814.chunk.js",
     "static/media/programmer1.png": "/helloWork.github.io/static/media/programmer1.db532ae26c097e9f8f60.png",
     "static/media/aboutsus.png": "/helloWork.github.io/static/media/aboutsus.4902341047742ae83372.png",
@@ -10,11 +10,11 @@
     "static/media/logo.svg": "/helloWork.github.io/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/helloWork.github.io/index.html",
     "main.fc5921a4.css.map": "/helloWork.github.io/static/css/main.fc5921a4.css.map",
-    "main.f36a5aac.js.map": "/helloWork.github.io/static/js/main.f36a5aac.js.map",
+    "main.d531df63.js.map": "/helloWork.github.io/static/js/main.d531df63.js.map",
     "787.6aeb8814.chunk.js.map": "/helloWork.github.io/static/js/787.6aeb8814.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc5921a4.css",
-    "static/js/main.f36a5aac.js"
+    "static/js/main.d531df63.js"
   ]
 }
