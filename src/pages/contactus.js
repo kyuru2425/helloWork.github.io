@@ -27,6 +27,18 @@ const Contactus = () => {
     () => localStorage.setItem("Contact_Us", JSON.stringify(infoList)),
     [infoList]
   );
+  const emailSent = () => {
+    if (
+      firstRefName.current.value == "" ||
+      lastRefName.current.value == "" ||
+      emailRef.current.value == "" ||
+      messageRef.current.value == ""
+    ) {
+      alert("Fill-out the empty fields");
+    } else {
+      alert("Thank you for your message");
+    }
+  };
 
   return (
     <div class="contactUsContainer">
@@ -112,7 +124,11 @@ const Contactus = () => {
         <br />
         <br />
 
-        <button type="submit" className="button-hook btn w-50 contactUsButton">
+        <button
+          type="submit"
+          className="button-hook btn w-50 contactUsButton"
+          onClick={emailSent}
+        >
           Submit
         </button>
       </form>

@@ -45,16 +45,36 @@ const Home = () => {
       </div>
       <div className="countDiv">
         <div>
-          <h1>150K</h1>
-          <p>Job Vacancies</p>
+          {/* <h1>150K</h1>
+          <p>Job Vacancies</p> */}
+          <h1>
+            How it <br />
+            works
+          </h1>
         </div>
         <div>
-          <h1>205K+</h1>
-          <p>Job Seekers Active</p>
+          {/* <h1>205K+</h1>
+          <p>Job Seekers Active</p> */}
+          <h3>
+            1. Register an account <br />
+            and then log in
+          </h3>
         </div>
         <div>
-          <h1>125K+</h1>
-          <p>Incorporated Companies</p>
+          {/* <h1>125K+</h1>
+          <p>Incorporated Companies</p> */}
+          <h3>
+            2. Find A job by searching
+            <br /> the position you desire
+          </h3>
+        </div>
+        <div>
+          {/* <h1>125K+</h1>
+          <p>Incorporated Companies</p> */}
+          <h3>
+            3. Upload your resume <br />
+            and then apply
+          </h3>
         </div>
       </div>
     </div>

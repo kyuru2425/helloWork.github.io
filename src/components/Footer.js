@@ -83,7 +83,10 @@ const Footer = () => {
             <div class="contactDetails">
               <p>You can Email us Here:</p>
               <p>
-                Email: <b>helloworkcorps@gmail.com</b>
+                Email:{" "}
+                <a href="#" className="emailFooter">
+                  <b>helloworkcorps@gmail.com</b>
+                </a>
               </p>
             </div>
             <div>

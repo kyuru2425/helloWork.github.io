@@ -69,6 +69,16 @@
   color: white;
   background-color: #5c84ad4e;
 }
+.countDiv > div {
+  padding: 5px;
+}
+
+.countDiv h3 {
+  color: white;
+  border-left: 1px solid white;
+  padding-left: 5vw;
+}
+
 @media screen and (max-width: 1300px) {
   .textContainer > h1 {
     font-size: 70px;
@@ -91,9 +101,16 @@
     height: 100%;
   }
 }
+
 @media screen and (max-width: 600px) {
   .countDiv {
     flex-direction: column;
+  }
+
+  .countDiv h3 {
+    border: none;
+    font-size: larger;
+    padding-top: 1vh;
   }
   .textContainer > h1 {
     font-size: 30px;

@@ -36,10 +36,10 @@ const Aboutus = () => {
             entry level to senior level developers.
             <br />
             <br />
-            Those interested in finding a job can browse job openings or search
-            for specific positions and then create a free account that allows
-            them to monitor their applications. The jobs are also easily
-            categorized for easier browsing.
+            Those interested in finding a job can create a free account and
+            browse job openings or search for specific positions. In the future
+            the users will be able to monitor their applications. The jobs are
+            also easily categorized for easier browsing.
           </p>
 
           <button className="todev">

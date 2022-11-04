@@ -18,3 +18,13 @@
 .icons > a {
   color: white;
 }
+.emailFooter {
+  color: white;
+}
+
+.emailFooter > b:hover {
+  color: #fbb631;
+}
+footer b {
+  color: white;
+}
