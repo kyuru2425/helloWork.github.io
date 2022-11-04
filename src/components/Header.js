@@ -83,7 +83,7 @@ const Header = () => {
               </>
             ) : (
               <Navlist>
-                <StyledLink to="/helloWork.github.io/">
+                <StyledLink to="/helloWork.github.io/home">
                   <Button color="inherit">Home</Button>
                 </StyledLink>
                 <StyledLink to="/helloWork.github.io/findjob">
