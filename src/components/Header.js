@@ -52,7 +52,7 @@ const Header = () => {
   const logOutStatus = "none";
   function clearLocalStorage() {
     localStorage.removeItem("isLogIn");
-    window.location.href = "/";
+    window.location.href = "/helloWork.github.io/";
   }
   const theme = useTheme();
   console.log(theme);
