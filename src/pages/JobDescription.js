@@ -11,7 +11,7 @@ const JobDescription = () => {
   const emailSent = () => {
     if (islogIn == "") {
       alert("log in first");
-      window.location.href = "/login";
+      window.location.href = "/helloWork.github.io/login";
     } else if (resumeRef.current.value == "") {
       alert("Upload Resume First");
     } else {
